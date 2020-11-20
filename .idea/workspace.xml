@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="bbb6f8f6-ae77-4315-947a-0d358743c4e6" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/zyngjaku/tmsbackend/TmsBackendApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/zyngjaku/tmsbackend/TmsBackendApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/zyngjaku/tmsbackend/dao/CompanyRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/zyngjaku/tmsbackend/dao/CompanyRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/zyngjaku/tmsbackend/dao/OrderRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/zyngjaku/tmsbackend/dao/OrderRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/zyngjaku/tmsbackend/dao/UserRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/zyngjaku/tmsbackend/dao/UserRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/zyngjaku/tmsbackend/dao/VehicleRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/zyngjaku/tmsbackend/dao/VehicleRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/zyngjaku/tmsbackend/dao/entity/Company.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/zyngjaku/tmsbackend/dao/entity/Company.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/zyngjaku/tmsbackend/dao/entity/Localization.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/zyngjaku/tmsbackend/dao/entity/Localization.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/zyngjaku/tmsbackend/dao/entity/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/zyngjaku/tmsbackend/dao/entity/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/zyngjaku/tmsbackend/dao/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/zyngjaku/tmsbackend/dao/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/zyngjaku/tmsbackend/dao/entity/Vehicle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/zyngjaku/tmsbackend/dao/entity/Vehicle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/io/github/zyngjaku/tmsbackend/TmsBackendApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/io/github/zyngjaku/tmsbackend/TmsBackendApplicationTests.java" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="tms-backend" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1hn0YWXkBCEzkwjQ5Eeei9hjjIB" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../github/tms-backend" />
+    <property name="restartRequiresConfirmation" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="io.github.zyngjaku.tmsbackend" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="io.github.zyngjaku.tmsbackend.services" />
+      <recent name="io.github.zyngjaku.tmsbackend.controller" />
+      <recent name="io.github.zyngjaku.tmsbackend.dao.services" />
+      <recent name="io.github.zyngjaku.tmsbackend.dao.controller" />
+      <recent name="io.github.zyngjaku.tmsbackend.request" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Zyngi\Desktop\tms-backend\src\main\java\io\github\zyngjaku\tmsbackend" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.TmsBackendApplication">
+    <configuration name="SampleTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="tms-backend" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.github.zyngjaku.tmsbackend.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="io.github.zyngjaku.tmsbackend" />
+      <option name="MAIN_CLASS_NAME" value="io.github.zyngjaku.tmsbackend.SampleTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SampleTest.business_method_1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="tms-backend" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.github.zyngjaku.tmsbackend.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="io.github.zyngjaku.tmsbackend" />
+      <option name="MAIN_CLASS_NAME" value="io.github.zyngjaku.tmsbackend.SampleTest" />
+      <option name="METHOD_NAME" value="business_method_1" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SampleTest.business_method_12" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="tms-backend" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.github.zyngjaku.tmsbackend.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="io.github.zyngjaku.tmsbackend" />
+      <option name="MAIN_CLASS_NAME" value="io.github.zyngjaku.tmsbackend.SampleTest" />
+      <option name="METHOD_NAME" value="business_method_12" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SampleTest.create_new_employee" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="tms-backend" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.github.zyngjaku.tmsbackend.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="io.github.zyngjaku.tmsbackend" />
+      <option name="MAIN_CLASS_NAME" value="io.github.zyngjaku.tmsbackend.SampleTest" />
+      <option name="METHOD_NAME" value="create_new_employee" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SampleTest.create_new_employee_properly" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="tms-backend" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.github.zyngjaku.tmsbackend.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="io.github.zyngjaku.tmsbackend" />
+      <option name="MAIN_CLASS_NAME" value="io.github.zyngjaku.tmsbackend.SampleTest" />
+      <option name="METHOD_NAME" value="create_new_employee_properly" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TmsBackendApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="tms-backend" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="io.github.zyngjaku.tmsbackend.TmsBackendApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.SampleTest" />
+        <item itemvalue="JUnit.SampleTest.create_new_employee_properly" />
+        <item itemvalue="JUnit.SampleTest.create_new_employee" />
+        <item itemvalue="JUnit.SampleTest.business_method_12" />
+        <item itemvalue="JUnit.SampleTest.business_method_1" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="bbb6f8f6-ae77-4315-947a-0d358743c4e6" name="Default Changelist" comment="" />
+      <created>1600631598729</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1600631598729</updated>
+      <workItem from="1600631602862" duration="6864000" />
+      <workItem from="1600674333224" duration="1212000" />
+      <workItem from="1600677516326" duration="22000" />
+      <workItem from="1600707867392" duration="309000" />
+      <workItem from="1600716170441" duration="3666000" />
+      <workItem from="1600764092192" duration="17295000" />
+      <workItem from="1600807017999" duration="6113000" />
+      <workItem from="1600872765799" duration="1917000" />
+      <workItem from="1600876860417" duration="116000" />
+      <workItem from="1600970459262" duration="8976000" />
+      <workItem from="1601023501204" duration="1653000" />
+      <workItem from="1601032224904" duration="6027000" />
+      <workItem from="1601068805956" duration="1632000" />
+      <workItem from="1601137246600" duration="15941000" />
+      <workItem from="1601301782292" duration="343000" />
+      <workItem from="1601396736881" duration="10433000" />
+      <workItem from="1601497526938" duration="1487000" />
+      <workItem from="1601560727232" duration="6155000" />
+      <workItem from="1601577491253" duration="14728000" />
+      <workItem from="1601641061005" duration="2915000" />
+      <workItem from="1601727292579" duration="8025000" />
+      <workItem from="1602020546619" duration="740000" />
+      <workItem from="1602063388866" duration="954000" />
+      <workItem from="1602091628450" duration="598000" />
+      <workItem from="1602172390122" duration="3409000" />
+      <workItem from="1602511966511" duration="4495000" />
+      <workItem from="1602615732310" duration="720000" />
+      <workItem from="1602694710603" duration="1436000" />
+      <workItem from="1603040809662" duration="372000" />
+      <workItem from="1603128401466" duration="3381000" />
+      <workItem from="1603572710126" duration="4100000" />
+      <workItem from="1603656307774" duration="1200000" />
+      <workItem from="1603793971926" duration="238000" />
+      <workItem from="1604398907617" duration="1494000" />
+      <workItem from="1605128385963" duration="635000" />
+      <workItem from="1605374588581" duration="938000" />
+      <workItem from="1605395797771" duration="689000" />
+      <workItem from="1605475739919" duration="579000" />
+      <workItem from="1605722254047" duration="865000" />
+      <workItem from="1605820760080" duration="2328000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
