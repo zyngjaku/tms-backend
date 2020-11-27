@@ -1,6 +1,8 @@
 package io.github.zyngjaku.tmsbackend.dao.entity;
 
 import com.google.gson.annotations.Expose;
+import io.github.zyngjaku.tmsbackend.dao.VehicleRepo;
+import io.github.zyngjaku.tmsbackend.request.VehicleRequest;
 
 import javax.persistence.*;
 import java.time.LocalDate;
@@ -37,6 +39,10 @@ public class Vehicle {
     public Vehicle(String name, String registration, LocalDate reviewDate, Company company) {
         this(name, registration, company);
         this.reviewDate = reviewDate;
+    }
+
+    public Vehicle(VehicleRequest vehicleRequest, Company company) {
+        this(vehicleRequest.getName(), vehicleRequest.getRegistration(), vehicleRequest.getReviewDate(), company);
     }
 
     public String getName() {

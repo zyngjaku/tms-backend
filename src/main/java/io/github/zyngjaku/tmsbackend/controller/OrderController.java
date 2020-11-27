@@ -16,7 +16,7 @@ import java.security.Principal;
 import java.util.List;
 
 @RestController
-@RequestMapping(value = "/order")
+@RequestMapping(value = "/api")
 public class OrderController {
     private final OrderService orderService;
 
@@ -26,13 +26,13 @@ public class OrderController {
     }
 
     @PreAuthorize("hasAnyRole('OWNER', 'FORWARDER')")
-    @RequestMapping(value = "/all", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
+    @RequestMapping(value = "/orders", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
     public List<Order> getOrders(Principal principal) {
         return orderService.getOrders(principal.getName());
     }
 
     @PreAuthorize("hasAnyRole('OWNER', 'FORWARDER')")
-    @RequestMapping(value = "/future/all", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
+    @RequestMapping(value = "/orders/future", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
     public List<Order> getFutureOrders(Principal principal) {
         return orderService.getFutureOrders(principal.getName());
     }

@@ -14,6 +14,7 @@ import java.security.Principal;
 import java.util.List;
 
 @RestController
+@RequestMapping(value = "/api")
 public class UserController {
     private final UserService userService;
 
@@ -23,7 +24,7 @@ public class UserController {
     }
 
     @PreAuthorize("hasRole('OWNER')")
-    @RequestMapping(value = "/employee/create", method = RequestMethod.POST)
+    @RequestMapping(value = "/employees", method = RequestMethod.POST)
     public ResponseEntity employeeCreate(@RequestBody CreateEmployeeRequest registerRequest, Principal principal) {
         return userService.createEmployee(principal.getName(), registerRequest);
     }

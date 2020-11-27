@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.security.Principal;
 
 @RestController
-@RequestMapping(value = "/company")
+@RequestMapping(value = "/api")
 public class CompanyController {
     private final CompanyService companyService;
 
@@ -23,12 +23,12 @@ public class CompanyController {
         this.companyService = companyService;
     }
 
-    @RequestMapping(value = "/create", method = RequestMethod.POST)
+    @RequestMapping(value = "/companies", method = RequestMethod.POST)
     public ResponseEntity<?> companyCreate(@RequestBody CreateCompanyRequest createCompanyRequest) {
         return companyService.createCompany(createCompanyRequest);
     }
 
-    @RequestMapping(value = "/details", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
+    @RequestMapping(value = "/companies/details", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
     public Company companyGet(Principal principal) {
         return companyService.getCompanyDetails(principal.getName());
     }
