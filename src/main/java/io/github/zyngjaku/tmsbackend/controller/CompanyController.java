@@ -6,10 +6,7 @@ import io.github.zyngjaku.tmsbackend.services.CompanyService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.security.Principal;
 
@@ -23,12 +20,12 @@ public class CompanyController {
         this.companyService = companyService;
     }
 
-    @RequestMapping(value = "/companies", method = RequestMethod.POST)
+    @PostMapping(value = "/companies")
     public ResponseEntity<?> companyCreate(@RequestBody CreateCompanyRequest createCompanyRequest) {
         return companyService.createCompany(createCompanyRequest);
     }
 
-    @RequestMapping(value = "/companies/details", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
+    @GetMapping(value = "/companies/details", produces = MediaType.APPLICATION_JSON_VALUE)
     public Company companyGet(Principal principal) {
         return companyService.getCompanyDetails(principal.getName());
     }

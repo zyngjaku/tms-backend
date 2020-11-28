@@ -30,9 +30,9 @@ public class OrderService {
         return orderRepo.findOrdersByCompany(user.getCompany());
     }
 
-    public List<Order> getFutureOrders(String userMail) {
+    public List<Order> getOrders(String userMail, Date from) {
         User user = userService.getUserDetails(userMail);
 
-        return orderRepo.findOrdersByCompanyAndMaxArrivalTimeIsGreaterThan(user.getCompany(), new Date());
+        return orderRepo.findOrdersByCompanyAndMaxArrivalTimeIsGreaterThan(user.getCompany(), from);
     }
 }

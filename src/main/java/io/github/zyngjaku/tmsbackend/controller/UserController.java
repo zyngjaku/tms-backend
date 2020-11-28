@@ -24,30 +24,30 @@ public class UserController {
     }
 
     @PreAuthorize("hasRole('OWNER')")
-    @RequestMapping(value = "/employees", method = RequestMethod.POST)
+    @PostMapping(value = "/employees")
     public ResponseEntity employeeCreate(@RequestBody CreateEmployeeRequest registerRequest, Principal principal) {
         return userService.createEmployee(principal.getName(), registerRequest);
     }
 
     @PreAuthorize("hasAnyRole('OWNER', 'FORWARDER')")
-    @RequestMapping(value = "/employees", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
+    @GetMapping(value = "/employees", produces = MediaType.APPLICATION_JSON_VALUE)
     public List<User> employeeAll(Principal principal) {
         return userService.getAllEmployees(principal.getName());
     }
 
     @PreAuthorize("hasAnyRole('OWNER', 'FORWARDER', 'DRIVER')")
-    @RequestMapping(value = "/drivers", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
+    @GetMapping(value = "/drivers", produces = MediaType.APPLICATION_JSON_VALUE)
     public List<User> driverAll(Principal principal) {
         return userService.getAllDrivers(principal.getName());
     }
 
     @PreAuthorize("hasAnyRole('OWNER', 'FORWARDER', 'DRIVER')")
-    @RequestMapping(value = "/user/details", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
+    @GetMapping(value = "/user/details", produces = MediaType.APPLICATION_JSON_VALUE)
     public User userDetails(Principal principal) {
         return userService.getUserDetails(principal.getName());
     }
 
-    @RequestMapping(value = "/authenticate", method = RequestMethod.POST)
+    @PostMapping(value = "/authenticate")
     public ResponseEntity<?> userAuthenticate(@RequestBody AuthenticationRequest authenticationRequest) throws Exception {
         return userService.authenticateUser(authenticationRequest);
     }

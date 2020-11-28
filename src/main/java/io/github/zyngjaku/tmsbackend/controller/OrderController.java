@@ -8,11 +8,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.security.Principal;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 @RestController
@@ -26,14 +27,10 @@ public class OrderController {
     }
 
     @PreAuthorize("hasAnyRole('OWNER', 'FORWARDER')")
-    @RequestMapping(value = "/orders", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
-    public List<Order> getOrders(Principal principal) {
-        return orderService.getOrders(principal.getName());
-    }
+    @GetMapping(value = "/orders", produces = MediaType.APPLICATION_JSON_VALUE)
+    public List<Order> getOrders(Principal principal, @RequestParam(name = "from", required = false) String from) throws ParseException {
+        SimpleDateFormat DateFor = new SimpleDateFormat("HH:mm dd-MM-yyyy");
 
-    @PreAuthorize("hasAnyRole('OWNER', 'FORWARDER')")
-    @RequestMapping(value = "/orders/future", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
-    public List<Order> getFutureOrders(Principal principal) {
-        return orderService.getFutureOrders(principal.getName());
+        return (from == null)? orderService.getOrders(principal.getName()) : orderService.getOrders(principal.getName(), DateFor.parse(from));
     }
 }

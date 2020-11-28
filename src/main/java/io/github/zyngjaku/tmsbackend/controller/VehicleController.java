@@ -23,13 +23,13 @@ public class VehicleController {
     }
 
     @PreAuthorize("hasRole('OWNER')")
-    @RequestMapping(value = "/vehicles", method = RequestMethod.POST)
+    @PostMapping(value = "/vehicles")
     public ResponseEntity createVehicle(@RequestBody VehicleRequest vehicleRequest) {
         return vehicleService.createVehicle(vehicleRequest);
     }
 
     @PreAuthorize("hasAnyRole('OWNER', 'FORWARDER')")
-    @RequestMapping(value = "/vehicles", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
+    @GetMapping(value = "/vehicles", produces = MediaType.APPLICATION_JSON_VALUE)
     public List<Vehicle> getVehicle(Principal principal) {
         return vehicleService.getVehicle(principal.getName());
     }
