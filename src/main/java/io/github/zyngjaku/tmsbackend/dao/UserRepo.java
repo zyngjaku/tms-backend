@@ -12,6 +12,10 @@ public interface UserRepo extends JpaRepository<User, Long> {
     User findUserByMail(String mail);
     User findUserByToken(String token);
 
-    List<User> findUsersByCompanyAndMailNotContains(Company company, String mail);
     List<User> findUsersByCompanyAndLocalizationIsNotNullAndMailNotContains(Company company, String mail);
+    List<User> findUsersByCompanyAndMailNotContainsAndRoleIs(Company company, String mail, User.Role role);
+    List<User> findUsersByCompanyAndMailNotContains(Company company, String mail);
+    List<User> findUsersByCompanyAndRoleIs(Company company, User.Role role);
+    List<User> findUsersByCompany(Company company);
+
 }

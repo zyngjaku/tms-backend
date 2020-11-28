@@ -23,28 +23,29 @@ public class UserController {
         this.userService = userService;
     }
 
-    @PreAuthorize("hasRole('OWNER')")
-    @PostMapping(value = "/employees")
-    public ResponseEntity employeeCreate(@RequestBody CreateEmployeeRequest registerRequest, Principal principal) {
-        return userService.createEmployee(principal.getName(), registerRequest);
-    }
+    @PreAuthorize("hasAnyRole('OWNER', 'FORWARDER', 'DRIVER')")
+    @GetMapping(value = "/users", produces = MediaType.APPLICATION_JSON_VALUE)
+    public List<User> getUsers(Principal principal,
+                                @RequestParam(name = "role", required = false) User.Role role,
+                                @RequestParam(name = "excludeMe", defaultValue = "true") Boolean excludeMe) {
 
-    @PreAuthorize("hasAnyRole('OWNER', 'FORWARDER')")
-    @GetMapping(value = "/employees", produces = MediaType.APPLICATION_JSON_VALUE)
-    public List<User> employeeAll(Principal principal) {
-        return userService.getAllEmployees(principal.getName());
+        if (role == null) {
+            return userService.getUsers(principal.getName(), excludeMe);
+        }
+
+        return userService.getUsers(principal.getName(), excludeMe, role);
     }
 
     @PreAuthorize("hasAnyRole('OWNER', 'FORWARDER', 'DRIVER')")
-    @GetMapping(value = "/drivers", produces = MediaType.APPLICATION_JSON_VALUE)
-    public List<User> driverAll(Principal principal) {
-        return userService.getAllDrivers(principal.getName());
-    }
-
-    @PreAuthorize("hasAnyRole('OWNER', 'FORWARDER', 'DRIVER')")
-    @GetMapping(value = "/user/details", produces = MediaType.APPLICATION_JSON_VALUE)
+    @GetMapping(value = "/users/details", produces = MediaType.APPLICATION_JSON_VALUE)
     public User userDetails(Principal principal) {
         return userService.getUserDetails(principal.getName());
+    }
+
+    @PreAuthorize("hasRole('OWNER')")
+    @PostMapping(value = "/users")
+    public ResponseEntity employeeCreate(@RequestBody CreateEmployeeRequest registerRequest, Principal principal) {
+        return userService.createEmployee(principal.getName(), registerRequest);
     }
 
     @PostMapping(value = "/authenticate")

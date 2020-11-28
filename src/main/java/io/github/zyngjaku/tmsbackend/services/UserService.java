@@ -66,16 +66,24 @@ public class UserService {
         return ResponseEntity.ok(new JwtResponse(user.getToken()));
     }
 
-    public List<User> getAllEmployees(String companyOwnerMail) {
+    public List<User> getUsers(String companyOwnerMail, boolean excludeMe) {
         User user = userRepo.findUserByMail(companyOwnerMail);
 
-        return userRepo.findUsersByCompanyAndMailNotContains(user.getCompany(), user.getMail());
+        if (excludeMe) {
+            return userRepo.findUsersByCompanyAndMailNotContains(user.getCompany(), user.getMail());
+        }
+
+        return userRepo.findUsersByCompany(user.getCompany());
     }
 
-    public List<User> getAllDrivers(String companyOwnerMail) {
+    public List<User> getUsers(String companyOwnerMail, boolean excludeMe, User.Role role) {
         User user = userRepo.findUserByMail(companyOwnerMail);
 
-        return userRepo.findUsersByCompanyAndLocalizationIsNotNullAndMailNotContains(user.getCompany(), user.getMail());
+        if (excludeMe) {
+            return userRepo.findUsersByCompanyAndMailNotContainsAndRoleIs(user.getCompany(), user.getMail(), role);
+        }
+
+        return userRepo.findUsersByCompanyAndRoleIs(user.getCompany(), role);
     }
 
     public User getUserDetails(String userMail) {

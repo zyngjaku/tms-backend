@@ -3,12 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="bbb6f8f6-ae77-4315-947a-0d358743c4e6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/zyngjaku/tmsbackend/controller/CompanyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/zyngjaku/tmsbackend/controller/CompanyController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/zyngjaku/tmsbackend/controller/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/zyngjaku/tmsbackend/controller/OrderController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/io/github/zyngjaku/tmsbackend/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/zyngjaku/tmsbackend/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/zyngjaku/tmsbackend/controller/VehicleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/zyngjaku/tmsbackend/controller/VehicleController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/zyngjaku/tmsbackend/security/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/zyngjaku/tmsbackend/security/WebSecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/zyngjaku/tmsbackend/services/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/zyngjaku/tmsbackend/services/OrderService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/zyngjaku/tmsbackend/dao/UserRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/zyngjaku/tmsbackend/dao/UserRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/zyngjaku/tmsbackend/services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/zyngjaku/tmsbackend/services/UserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/io/github/zyngjaku/tmsbackend/utils/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/zyngjaku/tmsbackend/utils/Utils.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -244,7 +241,7 @@
       <workItem from="1606391050108" duration="727000" />
       <workItem from="1606510765082" duration="3407000" />
       <workItem from="1606555239116" duration="177000" />
-      <workItem from="1606558052579" duration="5258000" />
+      <workItem from="1606558052579" duration="12574000" />
     </task>
     <servers />
   </component>
