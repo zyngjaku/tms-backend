@@ -32,6 +32,12 @@ public class VehicleService {
         this.companyRepo = companyRepo;
     }
 
+    public List<Vehicle> getVehicle(String userMail) {
+        User user = userService.getUserDetails(userMail);
+
+        return vehicleRepo.findVehiclesByCompany(user.getCompany());
+    }
+
     @Transactional
     public ResponseEntity createVehicle(VehicleRequest vehicleRequest) {
         Company company = companyRepo.findCompanyByName(vehicleRequest.getCompanyName());
@@ -45,9 +51,27 @@ public class VehicleService {
         return new ResponseEntity(HttpStatus.CREATED);
     }
 
-    public List<Vehicle> getVehicle(String userMail) {
-        User user = userService.getUserDetails(userMail);
+    @Transactional
+    public ResponseEntity updateVehicle(Long vehicleId, VehicleRequest vehicleRequest) {
+        Vehicle vehicle = vehicleRepo.findVehiclesById(vehicleId);
+        if (vehicle == null) {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Not found vehicle with provided id");
+        }
 
-        return vehicleRepo.findVehiclesByCompany(user.getCompany());
+        vehicle.setFields(vehicleRequest);
+        vehicleRepo.save(vehicle);
+
+        return new ResponseEntity(HttpStatus.OK);
+    }
+
+    @Transactional
+    public ResponseEntity deleteVehicle(Long vehicleId) {
+        if (vehicleRepo.findVehiclesById(vehicleId) == null) {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Not found vehicle with provided id");
+        }
+
+        vehicleRepo.deleteById(vehicleId);
+
+        return new ResponseEntity(HttpStatus.OK);
     }
 }

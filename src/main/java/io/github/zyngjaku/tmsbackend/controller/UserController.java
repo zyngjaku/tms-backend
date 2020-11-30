@@ -2,7 +2,7 @@ package io.github.zyngjaku.tmsbackend.controller;
 
 import io.github.zyngjaku.tmsbackend.dao.entity.User;
 import io.github.zyngjaku.tmsbackend.request.AuthenticationRequest;
-import io.github.zyngjaku.tmsbackend.request.CreateEmployeeRequest;
+import io.github.zyngjaku.tmsbackend.request.UserRequest;
 import io.github.zyngjaku.tmsbackend.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
@@ -38,14 +38,32 @@ public class UserController {
 
     @PreAuthorize("hasAnyRole('OWNER', 'FORWARDER', 'DRIVER')")
     @GetMapping(value = "/users/details", produces = MediaType.APPLICATION_JSON_VALUE)
-    public User userDetails(Principal principal) {
+    public User getUserDetails(Principal principal) {
         return userService.getUserDetails(principal.getName());
     }
 
     @PreAuthorize("hasRole('OWNER')")
     @PostMapping(value = "/users")
-    public ResponseEntity employeeCreate(@RequestBody CreateEmployeeRequest registerRequest, Principal principal) {
-        return userService.createEmployee(principal.getName(), registerRequest);
+    public ResponseEntity createUser(Principal principal, @RequestBody UserRequest userRequest) {
+        return userService.createUser(principal.getName(), userRequest);
+    }
+
+    @PreAuthorize("hasAnyRole('OWNER', 'FORWARDER', 'DRIVER')")
+    @PutMapping(value = "/users")
+    public ResponseEntity updateUser(Principal principal, @RequestBody UserRequest userRequest) {
+        return userService.updateUser(principal.getName(), userRequest);
+    }
+
+    @PreAuthorize("hasRole('OWNER')")
+    @PutMapping(value = "/users/{userId}/hire")
+    public ResponseEntity hireUser(Principal principal, @PathVariable Long userId) {
+        return userService.hireUser(principal.getName(), userId);
+    }
+
+    @PreAuthorize("hasRole('OWNER')")
+    @PutMapping(value = "/users/{userId}/fire")
+    public ResponseEntity fireUser(Principal principal, @PathVariable Long userId) {
+        return userService.fireUser(principal.getName(), userId);
     }
 
     @PostMapping(value = "/authenticate")

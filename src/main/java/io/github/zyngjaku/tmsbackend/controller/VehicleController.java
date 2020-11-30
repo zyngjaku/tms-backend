@@ -22,15 +22,27 @@ public class VehicleController {
         this.vehicleService = vehicleService;
     }
 
+    @PreAuthorize("hasAnyRole('OWNER', 'FORWARDER')")
+    @GetMapping(value = "/vehicles", produces = MediaType.APPLICATION_JSON_VALUE)
+    public List<Vehicle> getVehicle(Principal principal) {
+        return vehicleService.getVehicle(principal.getName());
+    }
+
     @PreAuthorize("hasRole('OWNER')")
     @PostMapping(value = "/vehicles")
     public ResponseEntity createVehicle(@RequestBody VehicleRequest vehicleRequest) {
         return vehicleService.createVehicle(vehicleRequest);
     }
 
-    @PreAuthorize("hasAnyRole('OWNER', 'FORWARDER')")
-    @GetMapping(value = "/vehicles", produces = MediaType.APPLICATION_JSON_VALUE)
-    public List<Vehicle> getVehicle(Principal principal) {
-        return vehicleService.getVehicle(principal.getName());
+    @PreAuthorize("hasRole('OWNER')")
+    @PutMapping(value = "/vehicles/{vehicleId}")
+    public ResponseEntity createVehicle(@PathVariable Long vehicleId, @RequestBody VehicleRequest vehicleRequest) {
+        return vehicleService.updateVehicle(vehicleId, vehicleRequest);
+    }
+
+    @PreAuthorize("hasRole('OWNER')")
+    @DeleteMapping(value = "/vehicles/{vehicleId}")
+    public ResponseEntity deleteVehicle(@PathVariable Long vehicleId) {
+        return vehicleService.deleteVehicle(vehicleId);
     }
 }

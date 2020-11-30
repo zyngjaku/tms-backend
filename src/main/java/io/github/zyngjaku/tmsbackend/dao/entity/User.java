@@ -2,6 +2,7 @@ package io.github.zyngjaku.tmsbackend.dao.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.google.gson.annotations.Expose;
+import io.github.zyngjaku.tmsbackend.request.UserRequest;
 import io.github.zyngjaku.tmsbackend.security.WebSecurityConfig;
 import io.github.zyngjaku.tmsbackend.utils.Utils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -35,9 +36,8 @@ public class User {
     @JoinColumn(name = "localization_id")
     private Localization localization;
     @ManyToOne(cascade = CascadeType.MERGE)
-    @JoinColumn(name = "company_id", nullable = false)
+    @JoinColumn(name = "company_id")
     private Company company;
-    @Column(nullable = false)
     @Enumerated(EnumType.STRING)
     private Role role;
 
@@ -137,5 +137,23 @@ public class User {
     }
     public void setLocalization(Localization localization) {
         this.localization = localization;
+    }
+
+    public void copyFromRequest(UserRequest userRequest) {
+        if (userRequest.getMail() != null) {
+            setMail(userRequest.getMail());
+        }
+        if (userRequest.getPassword() != null) {
+            setPassword(userRequest.getPassword());
+        }
+        if (userRequest.getFirstName() != null) {
+            setFirstName(userRequest.getFirstName());
+        }
+        if (userRequest.getLastName() != null) {
+            setLastName(userRequest.getLastName());
+        }
+        if (userRequest.getRole() != null) {
+            setRole(userRequest.getRole());
+        }
     }
 }

@@ -20,13 +20,13 @@ public class CompanyController {
         this.companyService = companyService;
     }
 
-    @PostMapping(value = "/companies")
-    public ResponseEntity<?> companyCreate(@RequestBody CreateCompanyRequest createCompanyRequest) {
-        return companyService.createCompany(createCompanyRequest);
+    @GetMapping(value = "/companies/details", produces = MediaType.APPLICATION_JSON_VALUE)
+    public Company getCompany(Principal principal) {
+        return companyService.getCompanyDetails(principal.getName());
     }
 
-    @GetMapping(value = "/companies/details", produces = MediaType.APPLICATION_JSON_VALUE)
-    public Company companyGet(Principal principal) {
-        return companyService.getCompanyDetails(principal.getName());
+    @PostMapping(value = "/companies")
+    public ResponseEntity<?> createCompany(@RequestBody CreateCompanyRequest createCompanyRequest) {
+        return companyService.createCompany(createCompanyRequest);
     }
 }

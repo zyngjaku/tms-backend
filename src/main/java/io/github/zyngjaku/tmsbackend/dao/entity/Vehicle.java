@@ -10,17 +10,13 @@ import java.time.LocalDate;
 @Entity
 @Table(name = "Vehicles")
 public class Vehicle {
-    @Expose
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
     private Long id;
     @Column(nullable = false)
-    @Expose
     private String name;
-    @Expose
     @Column(unique = true)
     private String registration;
-    @Expose
     @Column(name = "review_date")
     private LocalDate reviewDate;
     @OneToOne(fetch = FetchType.EAGER)
@@ -43,6 +39,10 @@ public class Vehicle {
 
     public Vehicle(VehicleRequest vehicleRequest, Company company) {
         this(vehicleRequest.getName(), vehicleRequest.getRegistration(), vehicleRequest.getReviewDate(), company);
+    }
+
+    public Long getId() {
+        return id;
     }
 
     public String getName() {
@@ -71,5 +71,11 @@ public class Vehicle {
     }
     public void setCompany(Company company) {
         this.company = company;
+    }
+
+    public void setFields(VehicleRequest vehicleRequest) {
+        setName(vehicleRequest.getName());
+        setRegistration(vehicleRequest.getRegistration());
+        setReviewDate(vehicleRequest.getReviewDate());
     }
 }
