@@ -1,7 +1,7 @@
 package io.github.zyngjaku.tmsbackend.controller;
 
 import io.github.zyngjaku.tmsbackend.dao.entity.Company;
-import io.github.zyngjaku.tmsbackend.request.CreateCompanyRequest;
+import io.github.zyngjaku.tmsbackend.request.CompanyRequest;
 import io.github.zyngjaku.tmsbackend.services.CompanyService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
@@ -26,7 +26,7 @@ public class CompanyController {
     }
 
     @PostMapping(value = "/companies")
-    public ResponseEntity<?> createCompany(@RequestBody CreateCompanyRequest createCompanyRequest) {
-        return companyService.createCompany(createCompanyRequest);
+    public ResponseEntity<?> createCompany(@RequestBody CompanyRequest companyRequest) {
+        return companyService.createCompany(companyRequest);
     }
 }

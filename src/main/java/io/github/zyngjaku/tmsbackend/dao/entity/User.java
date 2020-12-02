@@ -143,9 +143,6 @@ public class User {
         if (userRequest.getMail() != null) {
             setMail(userRequest.getMail());
         }
-        if (userRequest.getPassword() != null) {
-            setPassword(userRequest.getPassword());
-        }
         if (userRequest.getFirstName() != null) {
             setFirstName(userRequest.getFirstName());
         }

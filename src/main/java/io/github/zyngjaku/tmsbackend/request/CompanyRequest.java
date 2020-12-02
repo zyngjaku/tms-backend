@@ -4,7 +4,7 @@ import io.github.zyngjaku.tmsbackend.dao.entity.User;
 
 import java.io.Serializable;
 
-public class CreateCompanyRequest implements Serializable {
+public class CompanyRequest implements Serializable {
     private String mail;
     private String password;
     private String firstName;
@@ -15,10 +15,10 @@ public class CreateCompanyRequest implements Serializable {
     private String zipCode;
     private String country;
 
-    public CreateCompanyRequest() {
+    public CompanyRequest() {
     }
 
-    public CreateCompanyRequest(String mail, String password, String firstName, String lastName, String name, String street, String city, String zipCode, String country) {
+    public CompanyRequest(String mail, String password, String firstName, String lastName, String name, String street, String city, String zipCode, String country) {
         setMail(mail);
         setPassword(password);
         setFirstName(firstName);
