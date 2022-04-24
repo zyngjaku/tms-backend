@@ -32,11 +32,6 @@ class SimpleTests {
     }
 
     @Test
-    public void failSimpleTest() {
-        assertThat(1).isEqualTo(2);
-    }
-
-    @Test
     @Disabled("Ignore tests, not ready")
     public void skipSimpleTest() {
         assertThat(1).isEqualTo(1);
